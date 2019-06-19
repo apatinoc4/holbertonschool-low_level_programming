@@ -3,6 +3,8 @@
 /**
  * main - Entry point
  *
+ * Description use other library
+ *
  * Return: Always 1 (Error)
  */
 int main(void)
