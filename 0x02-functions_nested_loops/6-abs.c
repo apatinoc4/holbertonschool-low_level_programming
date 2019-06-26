@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
-*int _abs - programs things
+*_abs - programs things
 *@n : character defined
 *Result: always returns 0
 *Return: 0
