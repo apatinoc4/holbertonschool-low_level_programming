@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * *puts2 - programs things
+ * *puts_half - programs things
  * *Result: always returns 0
  * *@str : variable to define array length
  * *Return: 0 sucess
