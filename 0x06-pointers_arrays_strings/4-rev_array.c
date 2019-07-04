@@ -10,19 +10,18 @@
   */
 void reverse_array(int *a, int n)
 {
-		int b = 0;
-			int c = 0;
-				int d;
-					int e[1000];
-
-						for (c = 0; c < n; c++)
-								{
-					e[c] = a[c];
-						}
-							for (b = 0; b < n; b++)
-									{
-			  		d = n - 1 - b;
-							a[b] = e[d];
-									d--;
-										}
+int b = 0;
+int c = 0;
+int d;
+int e[1000];
+for (c = 0; c < n; c++)
+{
+e[c] = a[c];
+}
+for (b = 0; b < n; b++)
+{
+d = n - 1 - b;
+a[b] = e[d];
+d--;
+}
 }
