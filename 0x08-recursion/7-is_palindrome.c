@@ -36,7 +36,7 @@ return (1);
 else if (c[a] != c[b])
 return (0);
 else
-return (_palindrome( a + 1, b - 1, c));
+return (_palindrome(a + 1, b - 1, c));
 }
 
 
