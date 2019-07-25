@@ -1,6 +1,13 @@
 #ifndef _CALC_H_
 #define _CALC_H_
 
+/**
+  *struct op - programs things
+  *Result: always returns 0
+  *@op : variable
+  *@f : variable
+  *Return: 0 sucess
+  */
 typedef struct op
 {
 char *op;
