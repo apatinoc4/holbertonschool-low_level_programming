@@ -3,7 +3,12 @@
 
 #include <stddef.h>
 
-
+/**
+  *struct list_s - programs things
+  *@str : variable
+  *@len : variable
+  *@next : variable
+  */
 typedef struct list_s
 {
 	char *str;
