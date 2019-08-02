@@ -6,17 +6,18 @@
   *@head : variable
   *Return: 0 sucess
   */
+
 void free_list(list_t *head)
 {
-	list_t *lista, *next;
+	list_t *current, *next;
 
-	lista = head;
-	while (lista != NULL)
+	current = head;
+	while (current != NULL)
 	{
-		next = lista->next;
-		free(lista->str);
-		free(lista);
-		lista = next;
+		next = current->next;
+		free(current->str);
+		free(current);
+		current = next;
 	}
 
 }

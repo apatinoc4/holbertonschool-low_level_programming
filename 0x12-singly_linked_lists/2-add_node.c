@@ -21,24 +21,23 @@ unsigned int _strlen(char *str)
   *@head : list
   *Return: 0 sucess
   */
-
-list_t *add_node(list_t **head, const char *str)
+st_t *add_node(list_t **head, const char *str)
 {
-	list_t *lista;
+	list_t *new;
 
 	if (str == NULL)
 		return (NULL);
-	lista = malloc(sizeof(list_t));
-		if (lista == NULL)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
-	lista->str = strdup(str);
-	if (lista->str == NULL)
+	new->str = strdup(str);
+	if (new->str == NULL)
 	{
-		free(lista);
+		free(new);
 		return (NULL);
 	}
-	lista->len = _strlen(lista->str);
-	lista->next = *head;
-	*head = lista;
-	return (lista);
+	new->len = _strlen(new->str);
+	new->next = *head;
+	*head = new;
+	return (new);
 }
