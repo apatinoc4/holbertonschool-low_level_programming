@@ -44,7 +44,7 @@ lenr = read(fd, buffer, letters);
 		return (0);
 	}
 
-lenw = write(STDIN_FILENO, buffer, lenr);
+lenw = write(STDOUT_FILENO, buffer, lenr);
 
 	if (lenw == -1)
 	{
