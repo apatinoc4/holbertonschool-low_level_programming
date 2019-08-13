@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 int fd;
 char *buffer;
-ssize_t lenread, lenwrite;
+ssize_t lenr, lenw;
 
 	if (filename == NULL)
 	{
@@ -34,24 +34,24 @@ buffer = malloc(sizeof(char) * letters);
 
 	if (buffer == NULL)
 	{
-		close(fd);
 		return (0);
 	}
 
-lenread = read(fd, buffer, letters);
-close(fd);
-	if (lenread == -1)
+lenr = read(fd, buffer, letters);
+	if (lenr == -1)
 	{
 		free(buffer);
 		return (0);
 	}
 
-lenwrite = write(STDIN_FILENO, buffer, letters);
-free(buffer);
+lenw = write(STDIN_FILENO, buffer, lenr);
 
-	if (lenwrite != lenread)
+	if (lenw == -1)
 	{
+		free(buffer);
 		return (0);
 	}
-return (lenwrite);
+free(buffer);
+close(fd);
+return (lenw);
 }
